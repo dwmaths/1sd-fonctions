@@ -1,4 +1,4 @@
-# Premiers pas en Python
+# Premiers pas avec Python
 
 On s'intéresse dans ce TP à la programmation en Python.
 
