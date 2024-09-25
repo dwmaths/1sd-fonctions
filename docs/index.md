@@ -1,6 +1,6 @@
 # Premiers pas avec Python
 
-On s'intéresse dans ce TP à la programmation en Python.
+On s'intéresése dans ce TP à la programmation en Python.
 
 <center>
     <img src="./images/python.png" alt="image" width="200" height="auto">
