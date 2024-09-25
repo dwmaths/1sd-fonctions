@@ -1,0 +1,581 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.37">
+    
+    
+      
+        <title>Premiers pas avec Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#premiers-pas-avec-python" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="." title="Premiers pas avec Python" class="md-header__button md-logo" aria-label="Premiers pas avec Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Premiers pas avec Python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Premiers pas avec Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+    
+  
+  Premiers pas avec Python
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Premiers pas avec Python" class="md-nav__button md-logo" aria-label="Premiers pas avec Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Premiers pas avec Python
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Premiers pas avec Python
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Premiers pas avec Python
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#decouvrir-lenvironnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Découvrir l'environnement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Découvrir l'environnement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thonny" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thonny
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premieres-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Premières instructions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utiliser-des-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utiliser des scripts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pour-aller-plus-loin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pour aller plus loin
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pour aller plus loin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utiliser-dautres-objets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utiliser d'autres objets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-bloc-conditionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le bloc conditionnel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="premiers-pas-avec-python">Premiers pas avec Python</h1>
+<p>On s'intéresse dans ce TP à la programmation en Python.</p>
+<p><center>
+    <img src="./images/python.png" alt="image" width="200" height="auto">
+</center></p>
+<p>Python s'affiche encore cette année comme un des langages préférés (si ce n'est le préféré) des utilisateurs :</p>
+<p><center>
+    <img src="./images/tiobe.png" alt="image" width="1200" height="auto">
+</center></p>
+<h2 id="decouvrir-lenvironnement">Découvrir l'environnement</h2>
+<h3 id="thonny">Thonny</h3>
+<p>Pour programmer en Python, on peut utiliser le logiciel <strong>Thonny</strong> qui possède une interface simpliste :</p>
+<p><center>
+    <img src="./images/thonny.png" alt="image" width="500" height="auto">
+</center></p>
+<p>Il possède deux zones principales qui ont chacune un rôle essentiel :</p>
+<ul>
+<li>la <strong>zone de script</strong> (la zone supérieure) : où on écrit des codes complets ;</li>
+<li>la <strong>console</strong> (la zone inférieure) : où on écrit des instructions et où on y obtient des résultats.</li>
+</ul>
+<h3 id="premieres-instructions">Premières instructions</h3>
+<p>La console est une calculatrice géante qui permet la réalisation de calculs assez conséquent.<br />
+Python sait gérer :</p>
+<ul>
+<li>les additions avec l'opérateur <code>+</code> ;</li>
+<li>les soustractions avec l'opérateur <code>-</code> ;</li>
+<li>les multiplications avec l'opérateur <code>*</code> ;</li>
+<li>les divisions avec l'opérateur <code>/</code> ;</li>
+<li>les puissances avec l'opérateur <code>**</code>.</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Pour commencer</p>
+<ol>
+<li>Dans la console, taper <code>1+2*3</code> et vérifier que vous obtenez bien <code>7</code>.</li>
+<li>Pour avoir le résultat de l'expression <span class="arithmatex">\(2\times 3^2-4\times\frac{20}{3}\)</span>, taper <code>2*3**2-4*20/3</code>.</li>
+<li>Taper l'instruction <code>2024**200</code> pour observer la valeur de <span class="arithmatex">\(2024^{200}\)</span>.</li>
+</ol>
+</div>
+<p>Si vous devez utiliser d'autres fonctions comme <strong>la racine carrée</strong>, il vous faut l'importer depuis le module <strong>maths</strong></p>
+<div class="admonition question">
+<p class="admonition-title">D'autres fonctions</p>
+<ol>
+<li>Dans la console, taper <code>from math import sqrt</code> pour importer la racine carrée.</li>
+<li>Vérifier que l'instruction <code>sqrt(36)</code> vous renvoie bien <code>6.0</code></li>
+<li>Vérifier que l'instruction <code>sqrt(2)**2</code> ne renvoie pas <code>2.0</code> comme cela aurait dû se produire.</li>
+</ol>
+</div>
+<h3 id="utiliser-des-scripts">Utiliser des scripts</h3>
+<p>Dans la zone de script, il est possible de définir ses propres fonctions puis de les utiliser dans la console.</p>
+<p><center>
+    <img src="./images/script.png" alt="image" width="100" height="auto">
+</center></p>
+<p>Commencer par télécharger le fichier <a href="files/script1.py">script1.py</a>, puis l'ouvrir avec Thonny.<br />
+Ce script permet de définir une fonction appelée <strong>f</strong> et définie par </p>
+<div class="arithmatex">\[
+f(x) = 2x-4
+\]</div>
+<p>Après avoir <strong>exécuter</strong> le script à l'aide de <img src="./images/run.png" alt="image" width="16" height="auto">, taper dans la console <code>f(5)</code>, puis <code>f(2)</code> et enfin <code>f(f(3)-1)</code>.</p>
+<div class="admonition question">
+<p class="admonition-title">Définir ses fonctions</p>
+<p>Dans le même script qu'au dessus, définir les fonctions :</p>
+<ol>
+<li><span class="arithmatex">\(g\)</span> définie par <span class="arithmatex">\(g(x) = x^2-3x+1\)</span> ;</li>
+<li><span class="arithmatex">\(h\)</span> définie par <span class="arithmatex">\(h(x) = \dfrac{2x+6}{3x-2}\)</span> ;</li>
+<li><span class="arithmatex">\(i\)</span> définie par <span class="arithmatex">\(i(x) = \sqrt{6x^2-2}\)</span>.</li>
+</ol>
+<p>Vérifier alors que les instructions <code>g(4)</code>, <code>h(4)</code> et <code>i(1)</code> fournissent les valeurs <code>5</code>, <code>1.2</code> et <code>2.0</code>.</p>
+</div>
+<h2 id="pour-aller-plus-loin">Pour aller plus loin</h2>
+<h3 id="utiliser-dautres-objets">Utiliser d'autres objets</h3>
+<p>Python sait également manipuler des chaînes de caractères et des listes d'éléments.</p>
+<div class="admonition question">
+<p class="admonition-title">Quelques tests</p>
+<ol>
+<li>Dans la console, taper <code>c = "Lycée Colbert"</code> puis valider avec Entrée.</li>
+<li>Tester les instructions <code>c+c</code> ou encore <code>4*c</code>.</li>
+<li>Tester les instructions <code>len(c)</code> puis <code>c.count('e')</code>.</li>
+</ol>
+</div>
+<p>Une liste d'éléments se définie à l'aide de crochets <code>[]</code> comme dans l'instruction <code>L = [22, 7, 87]</code>.</p>
+<div class="admonition question">
+<p class="admonition-title">Tests sur les listes</p>
+<ol>
+<li>Vérifier que <code>len(L)</code> renvoie <code>3</code>.</li>
+<li>Tester les instructions <code>L[0]</code>, <code>L[1]</code> et <code>L[2]</code>.</li>
+<li>Tester les instructions <code>L.append(2024)</code> et observer le  changement sur la liste <code>L</code>.</li>
+</ol>
+</div>
+<h3 id="le-bloc-conditionnel">Le bloc conditionnel</h3>
+<p>En Python, il est possible de réaliser des actions différentes suivant qu'une condition soit vraie ou fausse.<br />
+On réalise cela à l'aide d'un bloc conditionnel <code>if ... else ...</code>.</p>
+<p>Commencer par télécharger le fichier <a href="files/script2.py">script2.py</a>, puis l'ouvrir avec Thonny.
+Ce script définie deux fonctions :</p>
+<ul>
+<li>une fonction IMC qui calcule l'IMC d'une personne ;</li>
+<li>une fonction avis_IMC qui commente l'IMC d'une personne.</li>
+</ul>
+<p>On rappelle que l'IMC est <strong>l'indice de masse corporelle</strong> est que l'on a :</p>
+<p><center>
+    <img src="./images/imc.png" alt="image" width="400" height="auto">
+</center></p>
+<div class="admonition question">
+<p class="admonition-title">Script IMC</p>
+<ol>
+<li>Compléter la fonction <code>IMC</code> à l'aide de la formule ;</li>
+<li>Compléter la fonction <code>avis_IMC</code> à l'aide du graphique.</li>
+<li>Vérifier l'avis d'IMC d'une personne mesurant 1.75m et pesant 82kg.</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 David Wrobel
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
